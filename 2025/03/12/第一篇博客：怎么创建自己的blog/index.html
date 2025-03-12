@@ -6,15 +6,15 @@
   
   <title>第一篇博客：怎么创建自己的blog | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="我将介绍如何构建自己的blog并发布文章 参考：Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 1.构建本地可访问的博客网站下载npm、node.js、hexo 2.构建外部可访问的博客网站">
+  <meta name="description" content="我将介绍如何构建自己的blog并发布文章 参考：Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 1.构建本地可访问的博客网站下载npm、node.js、hexo 123mkdir D:\myblogcd D:\myblog  初始化hexo 1hexo init myblog  进入博客目录、安装依赖 (我这里两个文件夹重名了，最好不要这样) 12cd myblognpm ins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一篇博客：怎么创建自己的blog">
 <meta property="og:url" content="http://example.com/2025/03/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我将介绍如何构建自己的blog并发布文章 参考：Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 1.构建本地可访问的博客网站下载npm、node.js、hexo 2.构建外部可访问的博客网站">
+<meta property="og:description" content="我将介绍如何构建自己的blog并发布文章 参考：Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 1.构建本地可访问的博客网站下载npm、node.js、hexo 123mkdir D:\myblogcd D:\myblog  初始化hexo 1hexo init myblog  进入博客目录、安装依赖 (我这里两个文件夹重名了，最好不要这样) 12cd myblognpm ins">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-03-12T11:57:11.000Z">
-<meta property="article:modified_time" content="2025-03-12T12:08:37.662Z">
+<meta property="article:modified_time" content="2025-03-12T12:18:59.772Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="博客">
@@ -100,11 +100,41 @@
         <p>我将介绍如何构建自己的blog并发布文章</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45019350/article/details/121901433">Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客</a></p>
 <h3 id="1-构建本地可访问的博客网站"><a href="#1-构建本地可访问的博客网站" class="headerlink" title="1.构建本地可访问的博客网站"></a>1.构建本地可访问的博客网站</h3><p>下载npm、node.js、hexo</p>
-<h3 id="2-构建外部可访问的博客网站"><a href="#2-构建外部可访问的博客网站" class="headerlink" title="2.构建外部可访问的博客网站"></a>2.构建外部可访问的博客网站</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir D:\myblog</span><br><span class="line"></span><br><span class="line">cd D:\myblog</span><br></pre></td></tr></table></figure>
+
+<p>初始化hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
+
+<p>进入博客目录、安装依赖</p>
+<p>(我这里两个文件夹重名了，最好不要这样)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd myblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-构建外部可访问的博客网站"><a href="#2-构建外部可访问的博客网站" class="headerlink" title="2.构建外部可访问的博客网站"></a>2.构建外部可访问的博客网站</h3><p>使用github实现</p>
+<p>1.创建一个新的仓库：</p>
+<ul>
+<li>仓库名称：必须为 **<code>你的GitHub用户名.github.io</code>**（例如 <code>shenchuf.github.io</code>）</li>
+</ul>
+<ul>
+<li>Public（公开）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>2.配置hexo部署</p>
+<p>编辑文件<code>_config.yml</code>中<code>deploy</code>部分：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/shenchuf/shenchuf.github.io.git</span><br><span class="line">  branch: main</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意：空格空格！！！<code>type:</code>和<code>repo:</code>后面一个空格，<code>branch:</code>后面两个空格</p>
+<p>3.生成静态文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean;hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>每次内容更新都要进行</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/" data-id="cm85vmnuz000168sjcgqab0an" data-title="第一篇博客：怎么创建自己的blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%9A%E6%80%8E%E4%B9%88%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84blog/" data-id="cm85w02i80000k0sjevyl3qu0" data-title="第一篇博客：怎么创建自己的blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
